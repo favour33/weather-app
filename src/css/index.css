@@ -1,74 +1,113 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #393342;
-    color: white;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #363456;
+  color: white;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .appContainer {
-    padding-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Come back and delete me later, just to help see the app */
+  width: 360px;
+  height: 640px;
+  border: solid 2px black;
 }
 
 .topContainerParent {
-    display: flex;
-}
-
-.topContainer {
-    display: flex;
-}
-
-#conditions {
-    width: 4em;
+  /* display: flex; */
+  width: 300px;
+  font-size: 22px;
 }
 
 #temperature {
-    text-align: center;
-    font-size: xx-large;
+  text-align: center;
+
+  font-size: 80px;
+  margin-top: 3px;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#conditions {
+  width: 4em;
 }
 
 .middleContainerParent {
-    display: flex;
-    padding-top: 20%;
+  display: flex;
+  margin-top: -25px;
 }
 
 .conditionsContainerParent {
-    display: flex;
-    padding-top: 23%;
+  display: flex;
 }
 
 .conditionsBarContainer {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  width: 360px;
+  background-color: #21233c;
+  height: 134px;
+  padding-top: 20px;
+  margin-top: -15px;
 }
 
-#condition1,
+.condition {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 33%;
+  margin-top: -10px;
+}
+
+.degree {
+  margin-top: 0;
+  font-size: 24px;
+  margin-right: 2px;
+}
+
+/* #condition1,
 #codition2,
 #condition3 {
-    padding-right: 1em;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 #conditionsImgPic1 {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 .conditionsImgPic {
-    text-align: center;
-}
+  text-align: center;
+} */
 
 .bottomContainerParent {
-    display: flex;
+  display: flex;
+
+  /* Changed bottom conatiner to none so isnt visible */
+  display: none;
 }
 
 .bottomBarContainer {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
