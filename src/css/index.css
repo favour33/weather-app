@@ -24,12 +24,28 @@ code {
   width: 360px;
   height: 640px;
   border: solid 2px black;
+  position: relative;
+}
+
+.appContainer_nav {
+  position: absolute;
+  z-index: 100;
+}
+
+/* .nav-container {
+  position: absolute;
+} */
+
+.appContainer {
+  position: fixed;
+  left: 0;
 }
 
 .topContainerParent {
   /* display: flex; */
   width: 300px;
   font-size: 22px;
+  display: flex;
 }
 
 #temperature {

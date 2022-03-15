@@ -28,3 +28,10 @@
 #calanderButton {
   background-color: white;
 }
+
+/* Side bar */
+.home,
+.reports,
+.products {
+  display: flex;
+}

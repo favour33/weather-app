@@ -1,60 +1,89 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import feelsLikePic from "../pic/feelsLike.PNG";
 import windPic from "../pic/windy.PNG";
 import humidityPic from "../pic/partRain.PNG";
 
 const ConditionsBar = () => {
+  // // check local storage
+  // const check = localStorage.getItem("weathers");
+
+  // if (check) {
+  //   setWeathers(JSON.parse(check));
+  // } else {
+  //   // lon and lat of london
+  //   const lon = 51.507351;
+  //   const lat = -0.127758;
+  //   // fetch response from openweather url
+  //   const response = await fetch(
+  //     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_API_KEY}`
+  //   );
+  //   // convert response in JSON format
+  //   const data = await response.json();
+  //   // log the data out for now
+  //   localStorage.setItem("weathers", JSON.stringify(data));
+
+  //   // update the set to hold the JSON object
+  //   setWeathers(data);
+  //   console.log(weathers.main.temp);
+  //   console.log(data);
+  // }
+
+  // useeffect hook to load the data whenever our page mounts
+  useEffect(() => {
+    getWeatherInfo();
+  }, []);
+
+  const [weathers, setWeathers] = useState({});
+
+  // aysnc function to fetch data
+  const getWeatherInfo = async () => {
+    // lon and lat of london
+    // const lon = 51.507351;
+    // const lat = -0.127758;
+    // fetch response from openweather url
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=-0.127758&lon=51.507351&appid=${process.env.REACT_APP_API_KEY}`
+    );
+    // convert response in JSON format
+    const data = await response.json();
+    // log the data out for now
+
+    // update the set to hold the JSON object
+    setWeathers(data);
+    console.log(data);
+  };
+
   return (
-    <div class="conditionsBarContainer">
-      <div className="condition">
-        <p className="condition-name">Feels Like</p>
-        <img id="thermometerIcon" src={feelsLikePic} alt="Themostat" />
-        <p className="degree">3°</p>
-      </div>
-      {/*  */}
-      <div className="condition">
-        <p className="condition-name">Wind</p>
-        <img id="windyIcon" src={windPic} alt="windy" />
-        <p className="degree">4.1 mph</p>
-        {/*  */}
-      </div>
-      {/*  */}
-      <div className="condition">
-        <p className="condition-name">Humidity</p>
-        <img id="humidityIcon" src={humidityPic} alt="humidity" />
-        <p className="degree">87%</p>
-        {/*  */}
-      </div>
-
-      {/* <div id="condition1">
-        Feels Like
-        <div id="thermostatImgContainer">
-          <img id="thermometerIcon" src={feelsLikePic} alt="icon" />
+    <>
+      {typeof weathers.main != "undefined" ? (
+        <div>
+          <div className="conditionsBarContainer">
+            <div className="condition">
+              <p className="condition-name">Feels Like</p>
+              <img id="thermometerIcon" src={feelsLikePic} alt="Themostat" />
+              <p className="degree">{weathers && weathers.main.temp}</p>
+            </div>
+            {/*  */}
+            <div className="condition">
+              <p className="condition-name">Wind</p>
+              <img id="windyIcon" src={windPic} alt="windy" />
+              <p className="degree">{weathers && weathers.wind.speed} mph</p>
+              {/*  */}
+            </div>
+            {/*  */}
+            <div className="condition">
+              <p className="condition-name">Humidity</p>
+              <img id="humidityIcon" src={humidityPic} alt="humidity" />
+              <p className="degree">{weathers && weathers.main.humidity} %</p>
+              {/*  */}
+            </div>
+          </div>
         </div>
-        <div id="conditionsImgPic1" class="conditionsImgPic">
-          3°
-        </div>
-      </div> */}
-
-      {/* <div id="condition2">
-        Wind
-        <div id="windyImgContainer">
-          <img id="windyIcon" src={windPic} alt="windy" />
-        </div>
-        <div id="conditionsImgPic2" class="conditionsImgPic">
-          4.1 mph
-        </div>
-      </div> */}
-      {/* <div id="condition3">
-        Humidity
-        <div id="humidityImgContainer">
-          <img id="humidityIcon" src={humidityPic} alt="humidity" />
-        </div>
-        <div id="conditionsImgPic3" class="conditionsImgPic">
-          87%
-        </div>
-      </div> */}
-    </div>
+      ) : (
+        ""
+      )}
+    </>
   );
 };
+
 export default ConditionsBar;
