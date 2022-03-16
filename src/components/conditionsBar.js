@@ -34,6 +34,7 @@ const ConditionsBar = () => {
   }, []);
 
   const [weathers, setWeathers] = useState({});
+  const REACT_APP_API_KEY = "89e4bc1fe6d1e59b2d9cad9147c51e5e";
 
   // aysnc function to fetch data
   const getWeatherInfo = async () => {
@@ -42,7 +43,7 @@ const ConditionsBar = () => {
     // const lat = -0.127758;
     // fetch response from openweather url
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=-0.127758&lon=51.507351&appid=${process.env.REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=-0.127758&lon=51.507351&appid=${REACT_APP_API_KEY}`
     );
     // convert response in JSON format
     const data = await response.json();
