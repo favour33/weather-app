@@ -22,4 +22,10 @@ export const SideBarData = [
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text",
   },
+  {
+    title: "Maps",
+    path: "/Map",
+    icon: <IoIcons.IoIosPaper/>,
+    cname: "nav-text"
+  }
 ];

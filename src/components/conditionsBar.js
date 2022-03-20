@@ -51,7 +51,7 @@ const ConditionsBar = () => {
 
     // update the set to hold the JSON object
     setWeathers(data);
-    console.log(data);
+    console.log(weathers);
   };
 
   return (

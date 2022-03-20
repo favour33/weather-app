@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home.js";
 import Settings from "../pages/Settings";
 import Updates from "../pages/Updates";
+import Maps from "../pages/Map";
 
 function App() {
   return (
@@ -15,26 +16,13 @@ function App() {
         <div className="nav-container">
           <Navbar />
         </div>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/updates" element={<Updates />} />
+          <Route path="/Map" element={<Maps/>}></Route>
         </Routes>
       </Router>
-      {/* 
-      <div className="topContainerParent">
-        <TopBar />
-      </div>
-      <div className="middleContainerParent">
-        <MiddleImage />
-      </div>
-      <div className="conditionsContainerParent">
-        <ConditionsBar />
-      </div>
-      <div className="bottomContainerParent">
-        <BottomBar />
-      </div> */}
     </div>
   );
 }
