@@ -1,11 +1,13 @@
-.navbar {
+/* .navbar {
   background-color: #363456;
   height: 80px;
   display: flex;
   justify-content: start;
   align-items: center;
+  position: absolute;
+  right: 1100px;
   z-index: 100;
-}
+} */
 
 .menu-bars {
   margin-left: 2rem;

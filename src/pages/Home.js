@@ -1,5 +1,5 @@
 import React from "react";
-import TopBar from "../components/topBar";
+import TopBar from "../components/TopBar";
 import MiddleImage from "../components/Middle-Image";
 import ConditionsBar from "../components/conditionsBar";
 import BottomBar from "../components/BottomBar";
