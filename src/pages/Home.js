@@ -3,7 +3,6 @@ import TopBar from "../components/topBar";
 import MiddleImage from "../components/Middle-Image";
 import ConditionsBar from "../components/conditionsBar";
 import BottomBar from "../components/BottomBar";
-// import Navbar from "./Navbar/Navbar";
 
 const Home = () => {
   return (

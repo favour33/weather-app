@@ -15,7 +15,7 @@ code {
 }
 
 .appContainer {
-  padding-top: 5%;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,13 +28,16 @@ code {
 }
 
 .appContainer_nav {
-  position: absolute;
-  z-index: 100;
+  position: relative;
+  width: 360px;
 }
 
-/* .nav-container {
+.navid {
   position: absolute;
-} */
+  top: 60px;
+  right: 20px;
+  z-index: 1000;
+}
 
 .appContainer {
   position: fixed;
@@ -58,6 +61,7 @@ code {
 .topContainer {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 #conditions {
@@ -78,7 +82,7 @@ code {
   flex-direction: row;
   width: 360px;
   background-color: #21233c;
-  height: 134px;
+  height: 150px;
   padding-top: 20px;
   margin-top: -15px;
 }
@@ -128,20 +132,16 @@ code {
   flex-direction: row;
 }
 
-
-
-
-
 /*==================update section=================*/
-#updatesContainer{
+#updatesContainer {
   /*app container overwrite*/
   padding-top: 0% !important;
 }
-#updatesTitleContainer{
+#updatesTitleContainer {
   width: 100%;
 }
 
-#updatesTitle{
+#updatesTitle {
   text-align: left;
   padding-left: 0.5em;
 
@@ -150,17 +150,15 @@ code {
   margin-block-end: 0.2em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-
 }
 
-.feed{
+.feed {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-
 }
 
-.feedElement{
+.feedElement {
   margin: 5%;
   flex-direction: column;
   padding-left: 0.3em;
@@ -169,7 +167,7 @@ code {
   border-radius: 1.5%;
 }
 
-.feedTitle{
+.feedTitle {
   font-size: 1.2em;
 
   /*h3 overwrite*/
@@ -179,7 +177,7 @@ code {
   margin-inline-end: 0px;
   font-weight: bold;
 }
-.feedDateTime{
+.feedDateTime {
   /*h4 overwrite*/
   margin-block-start: 0em;
   margin-block-end: 0em;
@@ -188,8 +186,7 @@ code {
   font-weight: normal;
 }
 
-.feedDescription{
-
+.feedDescription {
   /*p overwrite*/
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;

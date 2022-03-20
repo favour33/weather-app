@@ -1,5 +1,6 @@
 import React from "react";
 import menuImg from "../pic/sidebar2.png";
+import Navbar from "./Navbar/Navbar";
 
 const TopBar = () => {
   return (
@@ -9,16 +10,6 @@ const TopBar = () => {
         London, UK
         <div id="temperature">4°</div>
       </div>
-      {/* <div id="menuImg">
-        <img
-          id="menueImage"
-          src={menuImg}
-          alt="MenuIcon"
-          onClick={() => {
-            alert("Hello world");
-          }}
-        />
-      </div> */}
     </div>
   );
 };
