@@ -197,3 +197,13 @@ code {
   margin-inline-end: 0px;
   font-weight: normal;
 }
+
+
+/*==================settings section=================*/
+#scrollContainerSettings{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 360px;
+  height: 640px;
+}
