@@ -25,7 +25,7 @@ export const SideBarData = [
   {
     title: "Maps",
     path: "/Map",
-    icon: <IoIcons.IoIosPaper/>,
-    cname: "nav-text"
-  }
+    icon: <IoIcons.IoIosPaper />,
+    cName: "nav-text",
+  },
 ];
