@@ -51,8 +51,7 @@ const ConditionsBar = () => {
 
     // update the set to hold the JSON object
     setWeathers(data);
-    console.log(weathers);
-    console.log(weathers.main.temp);
+    console.log(data);
   };
 
   return (
@@ -64,7 +63,7 @@ const ConditionsBar = () => {
               <p className="condition-name">Feels Like</p>
               <img id="thermometerIcon" src={feelsLikePic} alt="Themostat" />
               <p className="degree">
-                {weathers && Math.round(300 - weathers.main.temp)}
+                {weathers && Math.round(300 - weathers.main.temp)}°
               </p>
             </div>
             {/*  */}
