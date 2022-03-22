@@ -28,4 +28,10 @@ export const SideBarData = [
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
+  {
+    title: "Add",
+    path: "/Add",
+    icon: <AiIcons.AiFillHome />,
+    cName: "nav-text"
+  }
 ];

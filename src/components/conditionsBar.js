@@ -29,6 +29,8 @@ const ConditionsBar = () => {
   // }
 
   // useeffect hook to load the data whenever our page mounts
+
+  
   useEffect(() => {
     getWeatherInfo();
   }, []);

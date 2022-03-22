@@ -34,7 +34,7 @@ code {
 
 .navid {
   position: absolute;
-  top: 40px;
+  top: 60px;
   right: 20px;
   z-index: 1000;
 }
@@ -45,25 +45,23 @@ code {
 }
 
 .topContainerParent {
-  width: 350px;
+  /* display: flex; */
+  width: 300px;
   font-size: 22px;
-  margin-left: 20px;
-  margin-top: -20px;
-}
-
-.first {
   display: flex;
-  justify-content: space-between;
-  width: 230px;
-}
-
-.second {
-  margin-top: -38px;
 }
 
 #temperature {
+  text-align: center;
+
   font-size: 80px;
-  margin-left: 130px;
+  margin-top: 3px;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 #conditions {
@@ -195,13 +193,4 @@ code {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: normal;
-}
-
-/*==================settings section=================*/
-#scrollContainerSettings {
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  width: 360px;
-  height: 640px;
 }
