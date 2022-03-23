@@ -27,7 +27,7 @@ const Map = () => {
   }, []);
 
   return (
-    <div>
+    <div className="map-name">
       <h1 className="ch">Map and Long Term Weather</h1>
       <div id="mapview" style={{ width: "300px" }}></div>
     </div>
