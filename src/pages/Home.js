@@ -18,7 +18,6 @@ const Home = () => {
 
   const result = localStorage.getItem('list-locations')
   const getDict = JSON.parse(result)
-  console.log(getDict)
   return (
     <>
     <Swiper 
@@ -28,23 +27,39 @@ const Home = () => {
         pagination={{clickable:true}}
     >
       <div>
-      {getDict.map(dict=>(
-        
-      <SwiperSlide key={dict.key} className="slide">
-        <div className="topContainerParent">
-          <TopBar Location={dict.key} LatLon={dict.value}/>
-        </div>
-        <div className="middleContainerParent">
-          <MiddleImage />
-        </div>
-        <div className="conditionsContainerParent">
-          <ConditionsBar LatLon={dict.value}/>
-        </div>
-        <div className="bottomContainerParent">
-          <BottomBar />
-        </div>
-      </SwiperSlide>
-    ))}
+      {getDict === null? (
+          <SwiperSlide key={"1"} className="slide">
+          <div className="topContainerParent">
+            <TopBar Location={"London"} LatLon={[51.507351,-0.127758]}/>
+          </div>
+          <div className="middleContainerParent">
+            <MiddleImage />
+          </div>
+          <div className="conditionsContainerParent">
+            <ConditionsBar LatLon={[51.507351,-0.127758]}/>
+          </div>
+          <div className="bottomContainerParent">
+            <BottomBar />
+          </div>
+        </SwiperSlide>
+      ): (
+        getDict.map(dict=>( 
+        <SwiperSlide key={dict.key} className="slide">
+          <div className="topContainerParent">
+            <TopBar Location={dict.key} LatLon={dict.value}/>
+          </div>
+          <div className="middleContainerParent">
+            <MiddleImage />
+          </div>
+          <div className="conditionsContainerParent">
+            <ConditionsBar LatLon={dict.value}/>
+          </div>
+          <div className="bottomContainerParent">
+            <BottomBar />
+          </div>
+        </SwiperSlide>
+        )))}
+      
       </div>
       </Swiper>
     </>

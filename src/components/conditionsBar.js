@@ -48,7 +48,7 @@ const ConditionsBar = (props) => {
     // const lat = -0.127758;
     // fetch response from openweather url
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lon}&lon=${lat}&appid=${REACT_APP_API_KEY}`
     );
     // convert response in JSON format
     const data = await response.json();
@@ -56,7 +56,7 @@ const ConditionsBar = (props) => {
 
     // update the set to hold the JSON object
     setWeathers(data);
-    console.log(data);
+    console.log(data.main.temp);
   };
 
   return (
@@ -68,7 +68,7 @@ const ConditionsBar = (props) => {
               <p className="condition-name">Feels Like</p>
               <img id="thermometerIcon" src={feelsLikePic} alt="Themostat" />
               <p className="degree">
-                {weathers && Math.round(300 - weathers.main.temp)}°
+                {weathers && Math.round(weathers.main.temp - 273.15)}°
               </p>
             </div>
             {/*  */}

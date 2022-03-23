@@ -15,6 +15,7 @@ const Map = () => {
     const [location, setNewLocation] = useState("")
     
     const getValues = async () =>{
+      console.log(location)
         var requestOptions = {
             method: "GET",
         }

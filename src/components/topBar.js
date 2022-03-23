@@ -21,7 +21,7 @@ const TopBar = (props) => {
     // const lat = -0.127758;
     // fetch response from openweather url
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${Lat}&lon=${Lon}&appid=${REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${Lon}&lon=${Lat}&appid=${REACT_APP_API_KEY}`
     );
     // convert response in JSON format
     const data = await response.json();
@@ -42,7 +42,7 @@ const TopBar = (props) => {
       <div className="second">
         {typeof weathers.main != "undefined" ? (
           <div id="temperature">
-            {weathers && Math.round(300 - weathers.main.temp)}°
+            {weathers && Math.round(weathers.main.temp - 273.15)}°
           </div>
         ) : (
           ""
