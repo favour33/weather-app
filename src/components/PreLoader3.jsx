@@ -36,12 +36,16 @@ function PreLoader3() {
          {!completed ? ( 
             <> 
               {!loading ? ( 
-                <div className = "title" >
-                    <h1> Welcome To AgriWeather </h1> 
-                    <img src = { loadingscreen }/> 
-                    <div className = "spinner">
-                        <span> Loading... </span> 
-                    </div> 
+                <div className="appContainer">
+                    <div className="loadContainer">
+                        <div className = "title" >
+                            <h1> Welcome To AgriWeather </h1> 
+                            <img src = { loadingscreen }/> 
+                            <div className = "spinner">
+                                <span> Loading... </span> 
+                            </div> 
+                        </div>
+                    </div>
                 </div>
                ) : ( 
                  <div className = "completed" > </div>
