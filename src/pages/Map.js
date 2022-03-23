@@ -17,8 +17,8 @@ const Map = () => {
                     center: 'austin,tx',
                     zoom: 6,
                     size: {
-                        width: 800,
-                        height: 600
+                        width: 300,
+                        height: 400
                     }
                 }
             })
@@ -35,7 +35,7 @@ const Map = () => {
   return(
     <div>
       Map
-      <div id="mapview" style={{width:"340px",height:"620px"}}>
+      <div id="mapview" style={{left:"0px"}}>
        
       </div>
     </div>

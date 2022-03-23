@@ -30,13 +30,13 @@ const Home = () => {
       {getDict === null? (
           <SwiperSlide key={"1"} className="slide">
           <div className="topContainerParent">
-            <TopBar Location={"London"} LatLon={[51.507351,-0.127758]}/>
+            <TopBar Location={"London"} LatLon={[-0.127758,51.507351]}/>
           </div>
           <div className="middleContainerParent">
             <MiddleImage />
           </div>
           <div className="conditionsContainerParent">
-            <ConditionsBar LatLon={[51.507351,-0.127758]}/>
+            <ConditionsBar LatLon={[-0.127758,51.507351]}/>
           </div>
           <div className="bottomContainerParent">
             <BottomBar />
