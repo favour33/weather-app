@@ -163,11 +163,7 @@ code {
   text-align: center;
 } */
 
-.swiper-pagination {
-  position: sticky;
-  bottom: 0;
-  background-color: white;
-}
+
 .ch {
   margin-top: 60px;
   margin-left: 20px;
