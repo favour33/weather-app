@@ -1,82 +1,83 @@
 .spinner {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
 
 .spinner span {
-    font-size: 3.5rem;
-    animation: fade 1s linear 0s infinite;
-    padding-right: 1rem;
-    /*margin-left: 1145px;
+  font-size: 3.5rem;
+  animation: fade 1s linear 0s infinite;
+  padding-right: 1rem;
+  /*margin-left: 1145px;
     margin-top: -180px;*/
-    letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
 }
 
 img {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    max-width: 70%;
-    margin-left: 50px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  max-width: 70%;
+  margin-left: 50px;
 
-    /*margin-left: 440px;
+  /*margin-left: 440px;
     margin-top: -35px;*/
 }
 
 .title {
-    letter-spacing: 0.2em;
-    font-size: 24px;
-    padding-top: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.2em;
+  font-size: 24px;
+  padding-top: 20px;
 }
 
 @keyframes bigger {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(2);
-    }
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(2);
+  }
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.loadContainer{
-    /*display: flex;
+.loadContainer {
+  /*display: flex;
     flex-direction: column;*/
- /* Come back and delete me later, just to help see the app */
-    text-align: center;
-    border: solid 2px black;
-    margin: 0;
-    background-color: #c1e8ff;
-    height: 640px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: rgb(0, 0, 0);
-    font-family: fantasy;
-    letter-spacing: 0.2em;
-    
+  /* Come back and delete me later, just to help see the app */
+  text-align: center;
+  border: solid 2px black;
+  margin: 0;
+  background-color: #c1e8ff;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+  font-family: fantasy;
+  letter-spacing: 0.2em;
+  background-color: #363456;
 }

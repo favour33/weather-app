@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #363456;
+  /* background-color: #363456; */
   color: white;
 }
 
@@ -16,7 +16,7 @@ code {
 
 .appContainer {
   /*padding-top: 40px;*/
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +32,7 @@ code {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #363456; */
+  background-color: #363456;
   /* color: white; */
 }
 
@@ -64,7 +64,8 @@ code {
   text-align: center;
 
   font-size: 80px;
-  margin-top: 3px;
+  margin-top: 40px;
+  margin-left: 30px;
 }
 
 .topContainer {
@@ -93,7 +94,7 @@ code {
   background-color: #21233c;
   height: 150px;
   padding-top: 20px;
-  margin-top: 12px;
+  margin-top: -30px;
 }
 
 .condition {
@@ -108,9 +109,11 @@ code {
   margin-right: 1px;
 }
 
-.condition-name{
+.condition-name {
   font-size: 19px;
   margin-right: -25px;
+  display: flex;
+  justify-content: center;
 }
 
 .degree {
@@ -118,6 +121,19 @@ code {
   font-size: 22px;
   width: 150%;
   margin-left: -5px;
+  display: flex;
+  justify-content: center;
+}
+
+#conditions {
+  margin-top: 22px;
+}
+
+#location {
+  position: absolute;
+  top: 15px;
+  left: 130px;
+  font-size: 22px;
 }
 
 /* #condition1,
@@ -136,6 +152,16 @@ code {
   text-align: center;
 } */
 
+.swiper-pagination {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+}
+.ch {
+  margin-top: 60px;
+  margin-left: 20px;
+}
+
 .bottomContainerParent {
   display: flex;
 
@@ -146,6 +172,40 @@ code {
 .bottomBarContainer {
   display: flex;
   flex-direction: row;
+}
+
+/* Add section */
+
+.add-conatiner {
+  margin-left: 20px;
+}
+
+.add-conatiner p {
+  font-size: 27px;
+}
+
+.Add-new-place {
+  margin-top: 80px;
+}
+
+.add-input {
+  height: 30px;
+  width: 240px;
+  border-radius: 10px;
+  border: none;
+}
+
+.add-button {
+  padding: 11px;
+  margin-left: 5px;
+  background-color: #5b3177;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.add-button:hover {
+  background-color: #7a5096;
 }
 
 /*==================update section=================*/
@@ -213,11 +273,11 @@ code {
 }
 
 /*==================settings section=================*/
-#scrollContainerSettings{
+#scrollContainerSettings {
   text-align: left !important;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   width: 360px;
   height: 640px;
-} 
+}
