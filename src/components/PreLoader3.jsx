@@ -20,7 +20,7 @@ function PreLoader3() {
             fetch("https://jsonplaceholder.typicode.com/posts")
                 .then((response) => response.json())
                 .then((json) => {
-                    console.log(json);
+                    // console.log(json);
                     setData(json);
                     setloading(true);
 
