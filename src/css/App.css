@@ -1,6 +1,4 @@
-.App {
-    text-align: center;
-}
+
 
 .App-logo {
     height: 40vmin;
@@ -12,8 +10,12 @@
         animation: App-logo-spin infinite 20s linear;
     }
 }
+/*moved to loadContainer in preloader3.css, since this was affecting the whole program*/
+/*#appC {
+    text-align: center;
+}
 
-.App-header {
+#app-header {
     background-color: #c1e8ff;
     min-height: 100vh;
     display: flex;
@@ -24,7 +26,7 @@
     color: rgb(0, 0, 0);
     font-family: fantasy;
     letter-spacing: 0.2em;
-}
+}*/
 
 .App-link {
     color: #61dafb;
