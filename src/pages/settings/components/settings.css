@@ -1,10 +1,12 @@
-body {
-  font-family: "Source Code Pro", monospace;
+body{
+  font-family: 'Source Code Pro', monospace;
 }
 
-section {
+section{
+ 
   background-color: white;
   border: solid black 1px;
+  
 }
 
 .hero {
@@ -16,9 +18,10 @@ section {
 
 nav {
   display: flex;
+
 }
 
-ul {
+ul{
   margin-left: 500px;
   display: flex;
   list-style-type: none;
@@ -27,34 +30,36 @@ ul {
   font-size: 30px;
 }
 
-ul.show {
+ul.show{
   display: block;
 }
 
 li {
   text-decoration: none;
+  
 }
 
-a:hover {
-  color: #cc2333;
+
+a:hover{
+color: #cc2333;
 }
 
-h1 {
+h1{
   font-size: 90px;
   margin: 0;
 }
 
-h2 {
+h2{
   font-size: 50px;
 }
 
-p {
+p{
   margin: 0;
   font-size: 30px;
   font-weight: 300;
 }
 
-.subtext {
+.subtext{
   font-size: 15px;
   font-weight: 300;
 }
@@ -64,11 +69,13 @@ p {
   height: 100%;
   justify-content: space-between;
   align-items: center;
+ 
 }
 
-.hero-text {
+.hero-text{
   margin-left: 80px;
   margin-bottom: 200px;
+
 }
 
 .button {
@@ -83,7 +90,7 @@ p {
   margin-top: 20px;
 }
 
-.lets-talk {
+.lets-talk{
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -97,7 +104,9 @@ p {
   border: none;
   cursor: pointer;
   animation: 2s ease-out 0s 1 slideInFromTop;
+
 }
+
 
 @keyframes slideInFromTop {
   0% {
@@ -108,6 +117,9 @@ p {
   }
 }
 
+
+
+
 .fade-in {
   animation: fadeIn ease 5s;
   -webkit-animation: fadeIn ease 5s;
@@ -117,49 +129,49 @@ p {
 }
 @keyframes fadeIn {
   0% {
-    opacity: 0;
+    opacity:0;
   }
   100% {
-    opacity: 1;
+    opacity:1;
   }
 }
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity: 0;
+    opacity:0;
   }
   100% {
-    opacity: 1;
+    opacity:1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity: 0;
+    opacity:0;
   }
   100% {
-    opacity: 1;
+    opacity:1;
   }
 }
 
 @-o-keyframes fadeIn {
   0% {
-    opacity: 0;
+    opacity:0;
   }
   100% {
-    opacity: 1;
+    opacity:1;
   }
 }
 
 @-ms-keyframes fadeIn {
   0% {
-    opacity: 0;
+    opacity:0;
   }
   100% {
-    opacity: 1;
-  }
+    opacity:1;
 }
-.lets-talk:active {
+}
+.lets-talk:active{
   background: #cc2333;
 }
 
@@ -167,35 +179,36 @@ p {
   background-color: #ef744b;
 }
 
-.button:active {
+.button:active{
   background-color: #a9a9a9;
   color: #808080;
 }
 
-.socials {
+.socials{
   padding-bottom: 200px;
 }
 
-.social {
+.social{
   margin: 10px;
 }
-.logo {
+.logo{
   height: 160px;
   margin: 30px;
 }
 
-.sub-section {
+.sub-section{
   display: flex;
   justify-content: space-around;
   padding: 80px;
 }
 
-.sub-section-alternative {
+.sub-section-alternative{
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 80px;
 }
+
 
 .project-card {
   width: 300px;
@@ -204,76 +217,79 @@ p {
   margin: 10px;
 }
 
-.project-container {
+.project-container{
   display: flex;
   justify-content: space-around;
 }
-@media only screen and (max-width: 1000px) {
-  .project-container {
-    display: flex;
-    flex-wrap: wrap;
+@media only screen and (max-width: 1000px){
+  .project-container{
+      display: flex;
+      flex-wrap: wrap;
   }
 }
 
-.project-image {
+.project-image{
   margin-top: 25px;
   height: 220px;
   width: 250px;
   border-radius: 125px;
 }
 
-hr {
+hr{
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 20px ;
 }
 
-.project-link {
-  text-decoration: none;
-  color: #ef744b;
+.project-link{
+  text-decoration:none;
+  color: #ef744b
 }
 
-a {
+a{
   text-decoration: none;
   color: white;
 }
 
-.navLink {
-  color: wheat;
-  opacity: 60%;
+.navLink{
+color: wheat;
+opacity: 60%;
+
 }
-.hamburger {
+.hamburger{
   display: none;
 }
 
-.hamburger:focus {
+.hamburger:focus{
   outline: 0;
 }
 
-@media only screen and (max-width: 1000px) {
-  .hamburger {
-    display: block;
-    border: 0;
-    background-color: transparent;
-    color: white;
-    font-size: 30px;
-    margin: 20px;
-    align-self: flex-end;
+@media only screen and (max-width:1000px){
+  .hamburger{
+      display: block;
+      border: 0;
+      background-color: transparent;
+      color: white;
+      font-size: 30px;
+      margin: 20px;
+      align-self: flex-end;
   }
 
-  ul {
-    display: none;
-    background-color: #3a3d4e;
-    margin: 0px;
+  ul{
+      display: none;
+      background-color: #3a3d4e;
+      margin: 0px;
   }
 
-  nav {
-    align-items: flex-start;
-    flex-direction: column-reverse;
-    background-color: #3a3d4e;
+  nav{
+      align-items: flex-start;
+      flex-direction: column-reverse;
+      background-color: #3a3d4e;
   }
 
-  .logo {
-    display: none;
+  
+
+  .logo{
+      display: none;
   }
 }
 
@@ -285,8 +301,7 @@ footer {
   padding: 80px;
 }
 
-input[type="text"],
-select {
+input[type=text], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -296,8 +311,7 @@ select {
   box-sizing: border-box;
 }
 
-input[type="email"],
-select {
+input[type=email], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -307,9 +321,9 @@ select {
   box-sizing: border-box;
 }
 
-input[type="submit"] {
+input[type=submit] {
   width: 100%;
-  background-color: #4caf50;
+  background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -318,8 +332,9 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.cont {
-  border-radius: 5px;
 
+.cont{
+  border-radius: 5px;
+ 
   padding: 20px;
 }

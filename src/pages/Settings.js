@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./settings/components/globalStyles";
-import { lightTheme, darkTheme } from "./settings/components/Theme";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
+import { lightTheme, darkTheme } from "./settings/components/Theme"
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 import Title from "./settings/components/Title";
-import Display from "./settings/display";
+import Display from "./settings/display"
 import padding from "./settings/components/padding";
-
 import SettingsIcon from '@mui/icons-material/Settings';
 import Button from '@mui/material/Button';
+import {useDarkMode} from "./settings/components/useDarkMode"
+import Toggle from "./settings/components/Toggler";
+import ControlledRadioButtonsGroup from "./settings/components/ChangeUnits";
+
 import "../css/index.css";
 
 
-import ControlledRadioButtonsGroup from "./settings/components/ChangeUnits";
+
 
 //Buttons for temp
 const change = <ControlledRadioButtonsGroup />;
@@ -63,10 +66,8 @@ const App = () => {
   ];
 
   // Change dark mode
-  const [theme, setTheme] = useState("light");
-  const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
+  const [theme, themeToggler] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme: darkTheme;
 
   const [visibleOptions, setVisibleOptions] = useState(settingOptions);
 
@@ -85,10 +86,11 @@ const App = () => {
           <GlobalStyles/>
           <div className="App">
             
-            <FormControlLabel control={<Switch  onClick={themeToggler} />} label={<h3>Dark Mode</h3>} />
+           
           
           
           <div>
+          <Toggle theme = {theme} toggleTheme = {themeToggler}/>
             {visibleOptions.map(option =><div key={option.header.name} className="mt-5 mt-2">
               <h3>{option.header.name}</h3>
               <div style={{borderRadius: "10px", border: "1px solid rgba(0, 0, 0, 0.25)", ...padding(5,5,5,5)}}>

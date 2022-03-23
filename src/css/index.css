@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #363456; */
+  background-color: #363456;
   color: white;
 }
 
@@ -39,9 +40,12 @@ code {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #363456;
+
   /* color: white; */
 }
+
+
+
 
 .appContainer_nav {
   position: relative;
