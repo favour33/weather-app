@@ -62,7 +62,7 @@ const ConditionsBar = () => {
         <div>
           <div className="conditionsBarContainer">
             <div className="condition">
-              <p className="condition-name">Feels Like</p>
+              <p className="condition-name">Feels</p>
               <img id="thermometerIcon" src={feelsLikePic} alt="Themostat" />
               <p className="degree">
                 {weathers && Math.round(300 - weathers.main.temp)}°
@@ -72,14 +72,14 @@ const ConditionsBar = () => {
             <div className="condition">
               <p className="condition-name">Wind</p>
               <img id="windyIcon" src={windPic} alt="windy" />
-              <p className="degree">{weathers && weathers.wind.speed} mph</p>
+              <p className="degree">{weathers && weathers.wind.speed}mph</p>
               {/*  */}
             </div>
             {/*  */}
             <div className="condition">
               <p className="condition-name">Humidity</p>
               <img id="humidityIcon" src={humidityPic} alt="humidity" />
-              <p className="degree">{weathers && weathers.main.humidity} %</p>
+              <p className="degree">{weathers && weathers.main.humidity}%</p>
               {/*  */}
             </div>
           </div>

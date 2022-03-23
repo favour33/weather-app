@@ -25,6 +25,14 @@ code {
   height: 640px;
   border: solid 2px black;
   position: relative;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #363456;
+  color: white;
 }
 
 .appContainer_nav {
@@ -34,7 +42,7 @@ code {
 
 .navid {
   position: absolute;
-  top: 60px;
+  top: 30px;
   right: 20px;
   z-index: 1000;
 }
@@ -84,24 +92,31 @@ code {
   background-color: #21233c;
   height: 150px;
   padding-top: 20px;
-  margin-top: -15px;
+  margin-top: 12px;
 }
 
 .condition {
   height: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 22px;
 
-  width: 33%;
-  margin-top: -10px;
+  max-width: 35%;
+  margin-top: -20px;
+  margin-right: 1px;
+}
+
+.condition-name{
+  font-size: 19px;
+  margin-right: -25px;
 }
 
 .degree {
-  margin-top: 0;
-  font-size: 24px;
-  margin-right: 2px;
+  margin-top: 5px;
+  font-size: 22px;
+  width: 150%;
+  margin-left: -5px;
 }
 
 /* #condition1,
@@ -194,3 +209,13 @@ code {
   margin-inline-end: 0px;
   font-weight: normal;
 }
+
+
+/*==================settings section=================*/
+#scrollContainerSettings{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 360px;
+  height: 640px;
+} 
