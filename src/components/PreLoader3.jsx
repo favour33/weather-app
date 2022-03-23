@@ -7,6 +7,7 @@ import Home from "../pages/Home.js";
 import Settings from "../pages/Settings";
 import Updates from "../pages/Updates";
 import Maps from "../pages/Map";
+import Add from "../pages/Add";
 import "../css/index.css";
 
 function PreLoader3() {
@@ -62,7 +63,8 @@ function PreLoader3() {
           <Route path="/" element={<Home />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/updates" element={<Updates />} />
-          <Route path="/Map" element={<Maps/>}></Route>
+          <Route path="/Map" element={<Maps/>}/>
+          <Route path="/Add" element={<Add/>}/>
         </Routes>
       </Router>
     </div>

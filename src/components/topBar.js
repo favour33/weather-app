@@ -3,7 +3,10 @@ import menuImg from "../pic/sidebar2.png";
 import Navbar from "./Navbar/Navbar";
 import { useEffect, useState } from "react";
 
-const TopBar = () => {
+const TopBar = (props) => {
+  const Location = props.Location
+  const Lat = props.LatLon[0]
+  const Lon = props.LatLon[1]
   useEffect(() => {
     getWeatherInfo();
   }, []);
@@ -18,7 +21,7 @@ const TopBar = () => {
     // const lat = -0.127758;
     // fetch response from openweather url
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=-0.127758&lon=51.507351&appid=${REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${Lat}&lon=${Lon}&appid=${REACT_APP_API_KEY}`
     );
     // convert response in JSON format
     const data = await response.json();
@@ -34,7 +37,7 @@ const TopBar = () => {
     <div className="topContainer">
       <div className="first">
         <div id="conditions">Full Moon Night</div>
-        <div id="location">London, UK </div>
+        <div id="location">{Location}</div>
       </div>
       <div className="second">
         {typeof weathers.main != "undefined" ? (

@@ -14,23 +14,6 @@ import 'swiper/css/scrollbar';
 
 
 SwiperCore.use([Navigation,Pagination])
-const data=[
-  {
-    id:1,
-    username:'aaa',
-    testimonial:'filler'
-  },
-  {
-    id:2,
-    username:'aaa',
-    testimonial:'filler'
-  },
-  {
-    id:3,
-    username:'aaa',
-    testimonial:'filler'
-  }
-  ]
 const Home = () => {
 
   const result = localStorage.getItem('list-locations')
@@ -43,20 +26,19 @@ const Home = () => {
         slidesPerView={1}
         navigation
         pagination={{clickable:true}}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
     >
       <div>
-      {data.map(user=>(
-      <SwiperSlide key={user.id} className="slide">
+      {getDict.map(dict=>(
+        
+      <SwiperSlide key={dict.key} className="slide">
         <div className="topContainerParent">
-          <TopBar />
+          <TopBar Location={dict.key} LatLon={dict.value}/>
         </div>
         <div className="middleContainerParent">
           <MiddleImage />
         </div>
         <div className="conditionsContainerParent">
-          <ConditionsBar />
+          <ConditionsBar LatLon={dict.value}/>
         </div>
         <div className="bottomContainerParent">
           <BottomBar />

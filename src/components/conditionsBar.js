@@ -3,7 +3,10 @@ import feelsLikePic from "../pic/feelsLike.PNG";
 import windPic from "../pic/windy.PNG";
 import humidityPic from "../pic/partRain.PNG";
 
-const ConditionsBar = () => {
+const ConditionsBar = (props) => {
+  
+  const lat = props.LatLon[0]
+  const lon = props.LatLon[1]
   // // check local storage
   // const check = localStorage.getItem("weathers");
 
@@ -45,7 +48,7 @@ const ConditionsBar = () => {
     // const lat = -0.127758;
     // fetch response from openweather url
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=-0.127758&lon=51.507351&appid=${REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${REACT_APP_API_KEY}`
     );
     // convert response in JSON format
     const data = await response.json();
@@ -62,7 +65,7 @@ const ConditionsBar = () => {
         <div>
           <div className="conditionsBarContainer">
             <div className="condition">
-              <p className="condition-name">Feels</p>
+              <p className="condition-name">Feels Like</p>
               <img id="thermometerIcon" src={feelsLikePic} alt="Themostat" />
               <p className="degree">
                 {weathers && Math.round(300 - weathers.main.temp)}°
@@ -72,14 +75,14 @@ const ConditionsBar = () => {
             <div className="condition">
               <p className="condition-name">Wind</p>
               <img id="windyIcon" src={windPic} alt="windy" />
-              <p className="degree">{weathers && weathers.wind.speed}mph</p>
+              <p className="degree">{weathers && weathers.wind.speed} mph</p>
               {/*  */}
             </div>
             {/*  */}
             <div className="condition">
               <p className="condition-name">Humidity</p>
               <img id="humidityIcon" src={humidityPic} alt="humidity" />
-              <p className="degree">{weathers && weathers.main.humidity}%</p>
+              <p className="degree">{weathers && weathers.main.humidity} %</p>
               {/*  */}
             </div>
           </div>
