@@ -25,6 +25,7 @@ const Home = () => {
         pagination={{ clickable: true }}
       >
         <div>
+          {/* is the user hasnt added  a location the default is London*/}
           {getDict === null ? (
             <SwiperSlide key={"1"} className="slide">
               <div className="topContainerParent">
@@ -41,6 +42,7 @@ const Home = () => {
               </div>
             </SwiperSlide>
           ) : (
+            // mapping the dictionary and passing values to other containers
             getDict.map((dict) => (
               <SwiperSlide key={dict.key} className="slide">
                 <div className="topContainerParent">

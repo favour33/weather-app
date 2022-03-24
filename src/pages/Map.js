@@ -8,7 +8,7 @@ const Map = () => {
       "S7qAPDYfude8398481Psc",
       "RXjWtivCWg69bT0WeuSBcaW2TS1rhewSpmQ3ltKJ"
     );
-
+    // get the element which will contain the map and render the map as we like
     aeris.views().then((views) => {
       const map = new views.Map("#mapview", {
         map: {

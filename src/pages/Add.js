@@ -7,7 +7,10 @@ const Map = () => {
   const [newLoc, setNew] = useState([]);
 
   const getValues = async () => {
+
+    // checking if input is empty
     if (location !== "") {
+      // checking if location already entered
       if (locationsArr.includes(location)) {
         alert("Location already added");
       } else {
@@ -16,12 +19,14 @@ const Map = () => {
         var requestOptions = {
           method: "GET",
         };
+        // getting geolocation from location entered
         const latLon = await fetch(
           `https://api.geoapify.com/v1/geocode/search?text=${location}&apiKey=a0c95706c69643f3980ee1bc068b2d3f`,
           requestOptions
         )
           .then((response) => response.json())
           .then((response) => {
+            // adding location and Lat Lon to dictionary
             dict.push({
               key: location,
               value: [
@@ -31,6 +36,7 @@ const Map = () => {
             });
           })
           .catch((err) => console.log(err));
+          // setting local storage to access dictionary from other files
         localStorage.setItem("list-locations", JSON.stringify(dict));
       }
     } else {
@@ -52,6 +58,7 @@ const Map = () => {
           Add
         </button>
         <p>Currently added:</p>
+        {/* mapping the locations to show the added locations to the user */}
         {newLoc.map((location_x) => {
           return <div key={location_x}>{location_x}</div>;
         })}
