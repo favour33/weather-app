@@ -1,3 +1,4 @@
+//Themes collected to change each mode
 export const lightTheme = {
   body: '#D9EEFF',
   text: 'black',

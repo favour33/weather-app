@@ -68,10 +68,11 @@ const App = () => {
   // Change dark mode
   const [theme, themeToggler] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme: darkTheme;
-
+  
   const [visibleOptions, setVisibleOptions] = useState(settingOptions);
 
   //main layout
+  //Theme provider changes the themes for the page
   return (
     <>
       <div className="appContainer">
@@ -81,6 +82,7 @@ const App = () => {
           <SettingsIcon fontSize="large"/>
           <Title/>
           <Display/>
+          
         <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
           <>
           <GlobalStyles/>

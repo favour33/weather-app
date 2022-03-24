@@ -1,3 +1,4 @@
+//takes values and enters it into the style to update the page
 import {createGlobalStyle} from "styled-components"
 
 export const GlobalStyles = createGlobalStyle

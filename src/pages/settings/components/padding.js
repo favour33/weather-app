@@ -1,3 +1,4 @@
+//file to style padding for elements 
 import React from "react";
 
 function padding(a, b, c, d) {

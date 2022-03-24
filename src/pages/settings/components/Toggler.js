@@ -1,3 +1,4 @@
+//Toggler changes theme
 import React from 'react'
 import { func, string } from 'prop-types';
 import styled from "styled-components"
@@ -11,6 +12,7 @@ const Button = styled.button`
   padding: 0.6rem;
   }
 `;
+//Exports essential functions for Toggle
 const Toggle = ({theme,  toggleTheme }) => {
     return (
         <Button onClick={toggleTheme} >
